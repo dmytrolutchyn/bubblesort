@@ -1,0 +1,33 @@
+<html>
+<body>
+<button onclick='fh()'>bubblesort</button>
+<script>
+function fh(a){
+var a = [];
+for (i = 1, j = 0; j <= 9; j++, i++) {
+  a[j] = Math.floor((Math.random() * 100) + 1);
+}
+
+jmax = 9;
+k = 0;
+function bubblesort(a) {
+  var c = 0;
+  while (jmax >= 0) {
+    for (j = 0; j <= jmax - 1; j++) {
+      if (a[j] >= a[j + 1]) {
+        c = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = c;
+      }
+    }
+    jmax = jmax - 1;
+  }
+  return(a)
+}
+k = bubblesort(a.slice());
+console.log('unsorted - ['+a+']')
+console.log('sorted - ['+k+']')
+}
+</script>
+</body>
+</html>
